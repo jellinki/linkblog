@@ -8,7 +8,7 @@ description: Tools and equipment setup for tools used throughout this class.
 courses: { csse: {week: 0}, csp: {week: 0}, csa: {week: 0} }
 tags: [books, test]
 ---
-
+## What is Going On?
 ## Hacks
 > Complete the procedure below accurately.  These are absolutely required and must be 100% accurate for your success.
 

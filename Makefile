@@ -56,10 +56,7 @@ default: server
 # Start the local web server
 server: stop convert
 	@echo "Starting server..."
-	@@nohup bundle exec jekyll serve -H 0.0.0.0 -P $(PORT) > $(LOG_FILE) 2>&1 & \
-		PID=$$!; \
-		echo "Server PID: $$PID"
-	@@until [ -f $(LOG_FILE) ]; do sleep 1; done
+	bundle exec jekyll serve
 
 
 # Convert .ipynb files to Markdown with front matter

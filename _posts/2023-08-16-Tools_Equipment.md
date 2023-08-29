@@ -2,10 +2,11 @@
 toc: true
 comments: true
 layout: post
-title: VSCode, Python, Jupyter, ...
+title: Week 1
+subtitle: Katelyn Gelle
 description: Tools and equipment setup for tools used throughout this class.
 courses: { csse: {week: 0}, csp: {week: 0}, csa: {week: 0} }
-type: hacks
+tags: [books, test]
 ---
 
 ## Hacks

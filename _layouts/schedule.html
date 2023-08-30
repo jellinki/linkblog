@@ -110,7 +110,7 @@ Load all posts with site
   {% assign units = units | concat:plans | concat:deli | concat:hacks | concat:deli | concat:tangibles  %}
 
   {%comment%} 
-  <!-- This Loop is maximum iterationss, since elements are pairs it will decrement a extra times at the end -->
+  <!-- This Loop is maximum iterations, since elements are pairs it will decrement a extra times at the end -->
   {%endcomment%}
   <tr>
   <td> {{ index }} </td> 
@@ -123,7 +123,7 @@ Load all posts with site
   <td>
       {% assign units = units | shift %} <!-- remove delimiter -->
     {% else %} <!-- make a link in the column -->
-      - <a href="{{site.baseurl}}/{{units[0]}}">{{units[1]}}</a> <br/> 
+      - <a href="_posts/2023-08-19-week1.md">{{units[1]}}</a> <br/> 
       {% assign units = units | shift | shift %} <!-- remove title and url -->
     {% endif %}
   {% endfor %}

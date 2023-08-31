@@ -2,7 +2,11 @@
 layout: default
 title: Katelyn Gelle's Blog
 ---
-
+<table>
+    <tr>
+        <td><img> src="/teacher//images/logo.png" height="60" title="Frontend" alt=""></td>
+        <td><a href="/teacher/index">Course</a></td>
+        <td><a href="/teacher/home/table">
 
 ## Katelyn's Blog
 Hello, welcome to my blog! My name is Katelyn Gelle. I am a senior at Del Norte High School. I am seventeen years old, and my favorite color is purple. Here are my classes this trimester:

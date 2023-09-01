@@ -8,7 +8,6 @@ description: Why am I here?
 gh-repo: jellinki/linkblog
 type: plans
 courses: { csse: {week: 0} }
-categories: [C1.4]
 ---
 
 ### PBL Unit 1 / Week 0

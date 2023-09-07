@@ -10,9 +10,10 @@ type: plans
 courses: { csse: {week: 0} }
 ---
 
-<div style="text-align: center; margin-top: 20px;">
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
   <img src="{{site.baseurl}}/images/akkalabotw.gif" alt="Akkala, The Legend of Zelda: Breath of The Wild" />
 </div>  
+
 
 ### PBL Unit 1 / Week 0
 {: .box-success}

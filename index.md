@@ -4,7 +4,7 @@ title: Katelyn Gelle's Blog
 ---
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-  <img src="{{site.baseurl}}/images/akkalabotw.gif" alt="Akkala, The Legend of Zelda: Breath of The Wild" />
+  <img src="{{site.baseurl}}/images/wadelink.gif" alt="Link in the Water, The Legend of Zelda: Breath of The Wild" />
 </div>  
 
 ## Katelyn's Blog

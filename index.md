@@ -3,6 +3,10 @@ layout: default
 title: Katelyn Gelle's Blog
 ---
 
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  <img src="{{site.baseurl}}/images/akkalabotw.gif" alt="Akkala, The Legend of Zelda: Breath of The Wild" />
+</div>  
+
 ## Katelyn's Blog
 Hello, welcome to my blog! My name is Katelyn Gelle. I am a senior at Del Norte High School. I am seventeen years old, and my favorite color is purple. Here are my classes this trimester:
 

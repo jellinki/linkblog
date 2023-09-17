@@ -126,6 +126,6 @@ function newInputLine(index) {
 }
 
 // Creates 1st input box on Window load
-newInputLine(0);
+newInputLine(1);
 
 </script>

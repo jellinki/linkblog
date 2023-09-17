@@ -12,23 +12,6 @@ categories: [C1.4]
 ---
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-  <img src="{{site.baseurl}}/images/NOOOOlink.gif" alt="Great Fairy Fountain, The Legend of Zelda: Breath of The Wild" />
-</div>  
-
----
-toc: true
-comments: true
-layout: post
-title:  Week 4
-subtitle: Katelyn Gelle
-cover-img: /images/swordplaylink.gif
-description: My documentation of my week 4 CSSE code!
-type: plans
-courses: { csse: {week: 4} }
-categories: [C1.4]
----
-
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
   <img src="{{site.baseurl}}/images/canyouhearmelink.gif" alt="Zelda's Crystal, The Legend of Zelda: Skyward Sword" />
 </div>  
 

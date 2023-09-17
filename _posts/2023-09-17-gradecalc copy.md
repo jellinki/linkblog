@@ -173,7 +173,17 @@ function newInputLine() {
 
     // Increment the current index for the next input
     currentIndex++;
+
+    // Call setColor for the new input element
+    setColor(currentIndex - 1);
 }
+
+// Call setColor for existing input elements when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    for (var i = 1; i < currentIndex; i++) {
+        setColor(i);
+    }
+});
 
 // Creates 1st input box on Window load
 newInputLine();

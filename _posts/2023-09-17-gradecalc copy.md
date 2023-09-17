@@ -70,8 +70,36 @@ function calculator(event) {
     }
 }
 
+// Deletes an input line
+function deleteInputLine(index) {
+    var scoreElement = document.getElementById(index);
+    var labelElement = document.querySelector('label[for="' + index + '"]');
+    var brElement = document.querySelector('br[for="' + index + '"]');
+
+    if (scoreElement) {
+        scoreElement.remove();
+    }
+
+    if (labelElement) {
+        labelElement.remove();
+    }
+
+    if (brElement) {
+        brElement.remove();
+    }
+
+    calculator({ key: "Tab" }); // Recalculate totals
+}
+
 // Creates a new input box
 function newInputLine(index) {
+    // Add a delete button for each score element
+    var deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'Delete';
+    deleteButton.onclick = function () {
+        deleteInputLine(index);
+    };
+    document.getElementById("scores").appendChild(deleteButton);
 
     // Add a label for each score element
     var title = document.createElement('label');

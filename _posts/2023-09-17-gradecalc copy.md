@@ -108,6 +108,17 @@ function deleteInputLine(index) {
         brElement.remove();
     }
 
+    // Decrement the current index
+    currentIndex--;
+
+    // Reassign IDs to remaining input elements
+    for (var i = index; i < currentIndex; i++) {
+        var nextIndex = i + 1;
+        document.getElementById(nextIndex).id = i;
+        document.querySelector('label[for="' + nextIndex + '"]').htmlFor = i;
+        document.querySelector('br[for="' + nextIndex + '"]').setAttribute('for', i);
+    }
+
     calculator({ key: "Tab" }); // Recalculate totals
 }
 

@@ -90,51 +90,17 @@ function calculator(event) {
     }
 }
 
-// Deletes an input line
-function deleteInputLine(index) {
-    var scoreElement = document.getElementById(index);
-    var labelElement = document.querySelector('label[for="' + index + '"]');
-    var brElement = document.querySelector('br[for="' + index + '"]');
-
-    if (scoreElement) {
-        scoreElement.remove();
-    }
-
-    if (labelElement) {
-        labelElement.remove();
-    }
-
-    if (brElement) {
-        brElement.remove();
-    }
-
-    calculator({ key: "Tab" }); // Recalculate totals
-}
-
 // Function to set the input field's color based on the entered value
-function setColor(index) {
-    var scoreElement = document.getElementById(index);
-    if (scoreElement) {
-        var value = parseFloat(scoreElement.value);
-        if (isNaN(value)) {
-            scoreElement.className = ''; // Reset the class
-        } else if (value < 60) {
-            scoreElement.className = 'red';
-        } else if (value >= 60 && value <= 80) {
-            scoreElement.className = 'yellow';
-        } else {
-            scoreElement.className = 'green';
-        }
-    }
-}
-
-// Event listener for input changes
-function handleInputChange(event) {
-    var key = event.key;
-    if (key === "Tab" || key === "Enter") {
-        calculator(event);
-        var index = event.target.id;
-        setColor(index);
+function setColor(input) {
+    var value = parseFloat(input.value);
+    if (isNaN(value)) {
+        input.className = ''; // Reset the class
+    } else if (value <= 60) {
+        input.className = 'red';
+    } else if (value <= 80) {
+        input.className = 'yellow';
+    } else {
+        input.className = 'green';
     }
 }
 
@@ -162,6 +128,12 @@ function newInputLine() {
     score.name = "score";  // name is used to group all "score" elements (array)
     score.style.textAlign = "right";
     score.style.width = "5em";
+    
+    // Add an input event listener to update the color as the user types
+    score.addEventListener('input', function () {
+        setColor(score);
+    });
+    
     document.getElementById("scores").appendChild(score);  // add to HTML
 
     // Create and add blank line after input box
@@ -173,15 +145,15 @@ function newInputLine() {
 
     // Increment the current index for the next input
     currentIndex++;
-
-    // Call setColor for the new input element
-    setColor(currentIndex - 1);
 }
 
 // Call setColor for existing input elements when the page loads
 document.addEventListener("DOMContentLoaded", function () {
     for (var i = 1; i < currentIndex; i++) {
-        setColor(i);
+        var input = document.getElementById(i);
+        if (input) {
+            setColor(input);
+        }
     }
 });
 

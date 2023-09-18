@@ -90,6 +90,27 @@ function calculator(event) {
     }
 }
 
+// Deletes an input line
+function deleteInputLine(index) {
+    var scoreElement = document.getElementById(index);
+    var labelElement = document.querySelector('label[for="' + index + '"]');
+    var brElement = document.querySelector('br[for="' + index + '"]');
+
+    if (scoreElement) {
+        scoreElement.remove();
+    }
+
+    if (labelElement) {
+        labelElement.remove();
+    }
+
+    if (brElement) {
+        brElement.remove();
+    }
+
+    calculator({ key: "Tab" }); // Recalculate totals
+}
+
 // Function to set the input field's color based on the entered value
 function setColor(input) {
     var value = parseFloat(input.value);
@@ -101,6 +122,16 @@ function setColor(input) {
         input.className = 'yellow';
     } else {
         input.className = 'green';
+    }
+}
+
+// Event listener for input changes
+function handleInputChange(event) {
+    var key = event.key;
+    if (key === "Tab" || key === "Enter") {
+        calculator(event);
+        var index = event.target.id;
+        setColor(index);
     }
 }
 
@@ -145,6 +176,9 @@ function newInputLine() {
 
     // Increment the current index for the next input
     currentIndex++;
+
+    // Call setColor for the new input element
+    setColor(currentIndex - 1);
 }
 
 // Call setColor for existing input elements when the page loads

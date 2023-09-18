@@ -95,6 +95,7 @@ function deleteInputLine(index) {
     var scoreElement = document.getElementById(index);
     var labelElement = document.querySelector('label[for="' + index + '"]');
     var brElement = document.querySelector('br[for="' + index + '"]');
+    var deleteButton = document.querySelector('button[for="' + index + '"]'); // Add this line
 
     if (scoreElement) {
         scoreElement.remove();
@@ -108,6 +109,10 @@ function deleteInputLine(index) {
         brElement.remove();
     }
 
+    if (deleteButton) { // Add this conditional
+        deleteButton.remove();
+    }
+
     // Decrement the current index
     currentIndex--;
 
@@ -117,6 +122,7 @@ function deleteInputLine(index) {
         document.getElementById(nextIndex).id = i;
         document.querySelector('label[for="' + nextIndex + '"]').htmlFor = i;
         document.querySelector('br[for="' + nextIndex + '"]').setAttribute('for', i);
+        document.querySelector('button[for="' + nextIndex + '"]').setAttribute('for', i); // Add this line
     }
 
     calculator({ key: "Tab" }); // Recalculate totals
@@ -154,6 +160,8 @@ function newInputLine() {
     deleteButton.onclick = function () {
         deleteInputLine(currentIndex);
     };
+    deleteButton.setAttribute('for', currentIndex); // Add this line to set the "for" attribute
+
     document.getElementById("scores").appendChild(deleteButton);
 
     // Add a label for each score element

@@ -7,7 +7,7 @@ subtitle: Katelyn Gelle
 cover-img: /images/swordplaylink.gif
 description: My modification of the JS Calculator!
 type: tangibles
-courses: { csse: {week: 5} }
+courses: { csse: {week: 4} }
 categories: [C1.4]
 ---
 

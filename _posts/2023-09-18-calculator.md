@@ -5,7 +5,7 @@ layout: post
 title: JS Calculator
 description: My modification of the JS Calculator!
 courses: { csse: {week: 5} }
-type: plans
+type: hacks
 ---
 <!-- 
 Hack 0: Right justify result

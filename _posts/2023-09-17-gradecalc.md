@@ -13,7 +13,7 @@ categories: [C1.4]
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
   <img src="{{site.baseurl}}/images/canyouhearmelink.gif" alt="Zelda's Crystal, The Legend of Zelda: Skyward Sword" />
-</div>  
+</div>
 
 %%html
 
@@ -38,11 +38,11 @@ categories: [C1.4]
         background-color: red;
         color: white;
     }
-    
+
     .yellow {
         background-color: yellow;
     }
-    
+
     .green {
         background-color: green;
         color: white;
@@ -57,9 +57,9 @@ var currentIndex = 1;
 function calculator(event) {
     var key = event.key;
     // Check if the pressed key is the "Tab" key (key code 9) or "Enter" key (key code 13)
-    if (key === "Tab" || key === "Enter") { 
+    if (key === "Tab" || key === "Enter") {
         event.preventDefault(); // Prevent default behavior (tabbing to the next element)
-   
+
         var array = document.getElementsByName('score'); // setup array of scores
         var total = 0;  // running total
         var count = 0;  // count of input elements with valid values
@@ -83,49 +83,49 @@ function calculator(event) {
             document.getElementById('average').innerHTML = "0.0";
         }
 
-        // adds newInputLine, only if all array values satisfy parseFloat 
+        // adds newInputLine, only if all array values satisfy parseFloat
         if (count === document.getElementsByName('score').length) {
             newInputLine(); // make a new input line
         }
     }
 }
 
-// Deletes an input line
+// Deletes an input line or clears its value (only clears the first cell)
 function deleteInputLine(index) {
-    var scoreElement = document.getElementById(index);
-    var labelElement = document.querySelector('label[for="' + index + '"]');
-    var brElement = document.querySelector('br[for="' + index + '"]');
-    var deleteButton = document.querySelector('button[for="' + index + '"]'); // Add this line
+    if (index === 1) {
+        var inputElement = document.getElementById(1);
 
-    if (scoreElement) {
-        scoreElement.remove();
+        if (inputElement) {
+            inputElement.value = ''; // Clear the input value of the first cell
+        }
+
+        // Recalculate totals without the cleared value
+        calculator({ key: "Tab" });
+    } else {
+        var scoreElement = document.getElementById(index);
+        var inputElement = document.querySelector('input[id="' + index + '"]');
+
+        if (scoreElement) {
+            scoreElement.remove();
+        }
+
+        if (inputElement) {
+            inputElement.remove();
+        }
+
+        // Decrement the current index
+        currentIndex--;
+
+        // Reassign IDs to remaining input elements
+        for (var i = index; i < currentIndex; i++) {
+            var nextIndex = i + 1;
+            document.getElementById(nextIndex).id = i;
+            document.querySelector('label[for="' + nextIndex + '"]').htmlFor = i;
+            document.querySelector('br[for="' + nextIndex + '"]').setAttribute('for', i);
+        }
+
+        calculator({ key: "Tab" }); // Recalculate totals
     }
-
-    if (labelElement) {
-        labelElement.remove();
-    }
-
-    if (brElement) {
-        brElement.remove();
-    }
-
-    if (deleteButton) { // Add this conditional
-        deleteButton.remove();
-    }
-
-    // Decrement the current index
-    currentIndex--;
-
-    // Reassign IDs to remaining input elements
-    for (var i = index; i < currentIndex; i++) {
-        var nextIndex = i + 1;
-        document.getElementById(nextIndex).id = i;
-        document.querySelector('label[for="' + nextIndex + '"]').htmlFor = i;
-        document.querySelector('br[for="' + nextIndex + '"]').setAttribute('for', i);
-        document.querySelector('button[for="' + nextIndex + '"]').setAttribute('for', i); // Add this line
-    }
-
-    calculator({ key: "Tab" }); // Recalculate totals
 }
 
 // Function to set the input field's color based on the entered value
@@ -167,23 +167,23 @@ function newInputLine() {
     // Add a label for each score element
     var title = document.createElement('label');
     title.htmlFor = currentIndex;
-    title.innerHTML = currentIndex + ". ";    
+    title.innerHTML = currentIndex + ". ";
     document.getElementById("scores").appendChild(title); // add to HTML
 
     // Setup score element and attributes
     var score = document.createElement("input"); // input element
-    score.id =  currentIndex;  // id of input element
+    score.id = currentIndex;  // id of input element
     score.onkeydown = calculator // Each key triggers event (using function as a value)
     score.type = "number"; // Use text type to allow typing multiple characters
     score.name = "score";  // name is used to group all "score" elements (array)
     score.style.textAlign = "right";
     score.style.width = "5em";
-    
+
     // Add an input event listener to update the color as the user types
     score.addEventListener('input', function () {
         setColor(score);
     });
-    
+
     document.getElementById("scores").appendChild(score);  // add to HTML
 
     // Create and add blank line after input box

@@ -7,7 +7,7 @@ description: My modification of the Calculator!
 permalink: /techtalk/home_style
 categories: [C1.4]
 courses: { csse: {week: 5} }
-type: ccc
+type: hacks
 ---
 
 <!--

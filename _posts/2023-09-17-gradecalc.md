@@ -95,6 +95,8 @@ function deleteInputLine(index) {
     var scoreElement = document.getElementById(index);
     var inputElement = document.querySelector('input[id="' + index + '"]');
     var deleteButton = document.querySelector('button[for="' + index + '"]');
+    var labelElement = document.querySelector('label[for="' + index + '"]');
+    var brElement = document.querySelector('br[for="' + index + '"]');
 
     if (index === 1) {
         if (inputElement) {
@@ -112,6 +114,14 @@ function deleteInputLine(index) {
 
         if (deleteButton) {
             deleteButton.remove();
+        }
+
+        if (labelElement) {
+            labelElement.remove();
+        }
+
+        if (brElement) {
+            brElement.remove();
         }
 
         // Decrement the current index

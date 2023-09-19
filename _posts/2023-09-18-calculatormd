@@ -4,10 +4,9 @@ comments: true
 hide: true
 layout: default
 description: My modification of the Calculator!
-permalink: /techtalk/home_style
-categories: [C1.4]
-courses: { csse: {week: 5} }
 type: hacks
+courses: { csse: {week: 5} }
+categories: [C1.4]
 ---
 
 <!--

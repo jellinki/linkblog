@@ -6,7 +6,7 @@ title:  JS Calculator
 subtitle: Katelyn Gelle
 cover-img: /images/swordplaylink.gif
 description: My modification of the JS Calculator!
-type: tangibles
+type: hacks
 courses: { csse: {week: 4} }
 categories: [C1.4]
 ---

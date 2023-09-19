@@ -1,10 +1,12 @@
 ---
-title: JS Calculator
+toc: true
 comments: true
-hide: true
-layout: default
-description: My modification of the Calculator!
-type: tangibles
+layout: post
+title:  JS Calculator
+subtitle: Katelyn Gelle
+cover-img: /images/swordplaylink.gif
+description: My modification of the JS Calculator!
+type: hacks
 courses: { csse: {week: 5} }
 categories: [C1.4]
 ---

@@ -4,7 +4,7 @@ comments: true
 hide: true
 layout: default
 description: My modification of the Calculator!
-type: hacks
+type: tangibles
 courses: { csse: {week: 5} }
 categories: [C1.4]
 ---

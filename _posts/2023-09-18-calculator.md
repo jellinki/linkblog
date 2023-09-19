@@ -11,25 +11,40 @@ courses: { csse: {week: 4} }
 categories: [C1.4]
 ---
 
-{% include nav_home.html %}
+<!-- 
+Hack 0: Right justify result
+Hack 1: Test conditions on small, big, and decimal numbers, report on findings. Fix issues.
+Hack 2: Add the common math operation that is missing from calculator
+Hack 3: Implement 1 number operation (ie SQRT) 
+-->
 
+<!-- 
+HTML implementation of the calculator. 
+-->
+
+<!-- 
+    Style and Action are aligned with HRML class definitions
+    style.css contains majority of style definition (number, operation, clear, and equals)
+    - The div calculator-container sets 4 elements to a row
+    Background is credited to Vanta JS and is implemented at bottom of this page
+-->
 <style>
   .calculator-output {
-    /* calulator output
+    /* calulator output 
       top bar shows the results of the calculator;
       result to take up the entirety of the first row;
       span defines 4 columns and 1 row
     */
     grid-column: span 4;
     grid-row: span 1;
-
+  
     border-radius: 10px;
     padding: 0.25em;
     font-size: 20px;
     border: 5px solid black;
-
+  
     display: flex;
-    align-items: center;
+    align-items: right;
   }
 </style>
 
@@ -54,10 +69,15 @@ categories: [C1.4]
       <div class="calculator-number">9</div>
       <div class="calculator-operation">*</div>
       <!--row 4-->
-      <div class="calculator-clear">A/C</div>
+      <div class="calculator-operation">√</div> <!-- added square root button -->
       <div class="calculator-number">0</div>
       <div class="calculator-number">.</div>
+      <div class="calculator-operation">/</div> <!-- added Division button -->
+      <!--row 5-->
       <div class="calculator-equals">=</div>
+      <div class="calculator-clear">A/C</div>
+
+
   </div>
 </div>
 
@@ -116,7 +136,7 @@ function operation (choice) { // function to input operations into the calculato
         return; // exits function
     }
     // occurs if there is already a number stored in the calculator
-    firstNumber = calculate(firstNumber, parseFloat(output.innerHTML));
+    firstNumber = calculate(firstNumber, parseFloat(output.innerHTML)); 
     operator = choice;
     output.innerHTML = firstNumber.toString();
     nextReady = true;
@@ -135,10 +155,20 @@ function calculate (first, second) { // function to calculate the result of the 
         case "*":
             result = first * second;
             break;
+        case "√":
+            result = Math.sqrt(first);
+            break;
         case "/":
+            if (second === 0) {
+              // Handle division by zero
+              output.innerHTML = "Error";
+              firstNumber = null;
+              nextReady = true;
+              return;
+              }
             result = first / second;
             break;
-        default:
+        default: 
             break;
     }
     return result;
@@ -173,14 +203,14 @@ function clearCalc () { // clears calculator
 }
 </script>
 
-<!--
+<!-- 
 Vanta animations just for fun, load JS onto the page
 -->
-<script src="{{site.baseurl}}/assets/js/three.r119.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.birds.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.halo.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.net.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.rings.min.js"></script>
+<script src="/student/assets/js/three.r119.min.js"></script>
+<script src="/student/assets/js/vanta.halo.min.js"></script>
+<script src="/student/assets/js/vanta.birds.min.js"></script>
+<script src="/student/assets/js/vanta.net.min.js"></script>
+<script src="/student/assets/js/vanta.rings.min.js"></script>
 
 <script>
 // setup vanta scripts as functions

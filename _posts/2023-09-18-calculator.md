@@ -1,16 +1,12 @@
 ---
 toc: true
-comments: true
+comments: false
 layout: post
-title:  JS Calculator
-subtitle: Katelyn Gelle
-cover-img: /images/swordplaylink.gif
+title: JS Calculator
 description: My modification of the JS Calculator!
-type: hacks
-courses: { csse: {week: 4} }
-categories: [C1.4]
+courses: { csse: {week: 5} }
+type: plans
 ---
-
 <!-- 
 Hack 0: Right justify result
 Hack 1: Test conditions on small, big, and decimal numbers, report on findings. Fix issues.

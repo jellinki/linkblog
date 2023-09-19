@@ -92,25 +92,26 @@ function calculator(event) {
 
 // Deletes an input line or clears its value (only clears the first cell)
 function deleteInputLine(index) {
-    if (index === 1) {
-        var inputElement = document.getElementById(1);
+    var scoreElement = document.getElementById(index);
+    var inputElement = document.querySelector('input[id="' + index + '"]');
+    var deleteButton = document.querySelector('button[for="' + index + '"]');
 
+    if (index === 1) {
         if (inputElement) {
             inputElement.value = ''; // Clear the input value of the first cell
+            inputElement.className = ''; // Reset the background color
         }
-
-        // Recalculate totals without the cleared value
-        calculator({ key: "Tab" });
     } else {
-        var scoreElement = document.getElementById(index);
-        var inputElement = document.querySelector('input[id="' + index + '"]');
-
         if (scoreElement) {
             scoreElement.remove();
         }
 
         if (inputElement) {
             inputElement.remove();
+        }
+
+        if (deleteButton) {
+            deleteButton.remove();
         }
 
         // Decrement the current index
@@ -122,6 +123,7 @@ function deleteInputLine(index) {
             document.getElementById(nextIndex).id = i;
             document.querySelector('label[for="' + nextIndex + '"]').htmlFor = i;
             document.querySelector('br[for="' + nextIndex + '"]').setAttribute('for', i);
+            document.querySelector('button[for="' + nextIndex + '"]').setAttribute('for', i);
         }
 
         calculator({ key: "Tab" }); // Recalculate totals

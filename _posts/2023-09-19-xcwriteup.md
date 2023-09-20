@@ -1,0 +1,22 @@
+---
+toc: true
+comments: true
+layout: post
+title:  Week 5
+subtitle: Katelyn Gelle
+cover-img: /images/swordplaylink.gif
+description: My documentation of my week 5 CSSE code!
+type: plans
+courses: { csse: {week: 5} }
+categories: [C1.4]
+---
+
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  <img src="{{site.baseurl}}/images/canyouhearmelink.gif" alt="Zelda's Crystal, The Legend of Zelda: Skyward Sword" />
+</div>  
+
+**Weekend (09.16.2023-09.18.2023)**  
+This weekend, I was able to successfully make changes to the grade calculator. I was able to create a "Delete" button that allowed you to remove entries that you no longer needed and a color factor that showed boxes in red if they were 60 or below, yellow for 61-80, and green for 81+ so that it showed how applicable the calculator was to the gradebook. I had a bug where the delete buttons wouldn't work after the colors were added, so I fixed this with ChatGPT.  
+
+**Day 20 (09.19.2023)**  
+Today, I'm trying to fix my JS Calculator. The buttons don't seem to be working; they keep showing as a column of random numbers. I don't know why this is. I'll keep trying to fix it.

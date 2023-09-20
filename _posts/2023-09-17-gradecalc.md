@@ -181,19 +181,6 @@ function handleInputChange(event) {
 
 // Creates a new input box
 function newInputLine() {
-    // Get the highest existing index to determine the current index
-    var existingIndices = Array.from(document.querySelectorAll('input[name="score"]')).map(function (el) {
-        return parseInt(el.id);
-    });
-    var highestIndex = Math.max(...existingIndices);
-
-    // Initialize currentIndex correctly
-    if (isNaN(highestIndex) || highestIndex === -Infinity) {
-        currentIndex = 1;
-    } else {
-        currentIndex = highestIndex + 1;
-    }
-
     // Add a delete button for each score element
     var deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Delete';
@@ -213,7 +200,7 @@ function newInputLine() {
     // Setup score element and attributes
     var score = document.createElement("input"); // input element
     score.id = currentIndex;  // id of input element
-    score.onkeydown = calculator // Each key triggers event (using function as a value)
+    score.onkeydown = calculator; // Each key triggers event (using function as a value)
     score.type = "number"; // Use text type to allow typing multiple characters
     score.name = "score";  // name is used to group all "score" elements (array)
     score.style.textAlign = "right";
@@ -228,6 +215,7 @@ function newInputLine() {
 
     // Create and add blank line after input box
     var br = document.createElement("br");  // line break element
+    br.setAttribute('for', currentIndex); // Set the "for" attribute for the line break
     document.getElementById("scores").appendChild(br); // add to HTML
 
     // Set focus on the new input line

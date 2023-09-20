@@ -15,10 +15,6 @@ categories: [C1.4]
   <img src="{{site.baseurl}}/images/totklinkgif.gif" alt="Link Against the Gloom, The Legend of Zelda: Tears of the Kingdom" />
 </div>  
 
-<!-->
-reminder to put them into paragraphs before submitting!!!
-<-->
-
 **People**  
 Collin Szeto: Class of 2021, Mech E at UCSD  
 Tristan Copley: Works at LG currently, studies/studied(?) at Miramar College  

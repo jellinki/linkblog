@@ -8,40 +8,68 @@ courses: { csse: {week: 5} }
 type: hacks
 ---
 
-<!-- 
-Hack 0: Right justify result
-Hack 1: Test conditions on small, big, and decimal numbers, report on findings. Fix issues.
-Hack 2: Add the common math operation that is missing from calculator
-Hack 3: Implement 1 number operation (ie SQRT) 
--->
-
-<!-- 
-HTML implementation of the calculator. 
--->
-
-<!-- 
-    Style and Action are aligned with HRML class definitions
-    style.css contains majority of style definition (number, operation, clear, and equals)
-    - The div calculator-container sets 4 elements to a row
-    Background is credited to Vanta JS and is implemented at bottom of this page
--->
 <style>
+  /* Calculator container */
+  .calculator-container {
+    max-width: 400px; /* Set a maximum width for the calculator */
+    margin: 0 auto; /* Center the calculator horizontally */
+    padding: 20px; /* Add some spacing around the calculator */
+  }
+
+  /* Calculator rows */
+  .calculator-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Each row has 4 equal columns */
+    grid-gap: 5px; /* Adjust the gap between buttons */
+  }
+
+  /* Number buttons */
+  .calculator-number {
+    border-radius: 5px;
+    padding: 5px; /* Smaller padding for smaller buttons */
+    font-size: 18px; /* Slightly smaller font size */
+    text-align: center;
+    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
+    color: white; /* Text color is white */
+    cursor: pointer;
+    box-shadow: 0 0 5px pink; /* Pink outline */
+  }
+
+  /* Operation buttons */
+  .calculator-operation {
+    border-radius: 5px;
+    padding: 5px; /* Smaller padding for smaller buttons */
+    font-size: 18px; /* Slightly smaller font size */
+    text-align: center;
+    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
+    color: white; /* Text color is white */
+    cursor: pointer;
+    box-shadow: 0 0 5px pink; /* Pink outline */
+  }
+
+  /* Result display */
   .calculator-output {
-    /* calulator output 
-      top bar shows the results of the calculator;
-      result to take up the entirety of the first row;
-      span defines 4 columns and 1 row
-    */
-    grid-column: span 4;
-    grid-row: span 1;
-  
+    grid-column: span 4; /* Result display spans all 4 columns in the row */
     border-radius: 10px;
     padding: 0.25em;
     font-size: 20px;
     border: 5px solid black;
-  
+    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
+    color: white; /* Text color is white */
     display: flex;
     align-items: right;
+  }
+
+  /* Equals and Clear buttons */
+  .calculator-equals, .calculator-clear {
+    border-radius: 5px;
+    padding: 5px; /* Smaller padding for smaller buttons */
+    font-size: 18px; /* Slightly smaller font size */
+    text-align: center;
+    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
+    color: white; /* Text color is white */
+    cursor: pointer;
+    box-shadow: 0 0 5px pink; /* Pink outline */
   }
 </style>
 
@@ -50,31 +78,39 @@ HTML implementation of the calculator.
   <div class="calculator-container">
       <!--result-->
       <div class="calculator-output" id="output">0</div>
-      <!--row 1-->
-      <div class="calculator-number">1</div>
-      <div class="calculator-number">2</div>
-      <div class="calculator-number">3</div>
-      <div class="calculator-operation">+</div>
-      <!--row 2-->
-      <div class="calculator-number">4</div>
-      <div class="calculator-number">5</div>
-      <div class="calculator-number">6</div>
-      <div class="calculator-operation">-</div>
-      <!--row 3-->
-      <div class="calculator-number">7</div>
-      <div class="calculator-number">8</div>
-      <div class="calculator-number">9</div>
-      <div class="calculator-operation">*</div>
-      <!--row 4-->
-      <div class="calculator-operation">√</div> <!-- added square root button -->
-      <div class="calculator-number">0</div>
-      <div class="calculator-number">.</div>
-      <div class="calculator-operation">/</div> <!-- added Division button -->
-      <!--row 5-->
-      <div class="calculator-equals">=</div>
-      <div class="calculator-clear">A/C</div>
-
-
+      <!-- Row 1 -->
+      <div class="calculator-row">
+        <div class="calculator-number">1</div>
+        <div class="calculator-number">2</div>
+        <div class="calculator-number">3</div>
+        <div class="calculator-operation">+</div>
+      </div>
+      <!-- Row 2 -->
+      <div class="calculator-row">
+        <div class="calculator-number">4</div>
+        <div class="calculator-number">5</div>
+        <div class="calculator-number">6</div>
+        <div class="calculator-operation">-</div>
+      </div>
+      <!-- Row 3 -->
+      <div class="calculator-row">
+        <div class="calculator-number">7</div>
+        <div class="calculator-number">8</div>
+        <div class="calculator-number">9</div>
+        <div class="calculator-operation">*</div>
+      </div>
+      <!-- Row 4 -->
+      <div class="calculator-row">
+        <div class="calculator-operation">√</div>
+        <div class="calculator-number">0</div>
+        <div class="calculator-number">.</div>
+        <div class="calculator-operation">/</div>
+      </div>
+      <!-- Row 5 -->
+      <div class="calculator-row">
+        <div class="calculator-equals">=</div>
+        <div class="calculator-clear">A/C</div>
+      </div>
   </div>
 </div>
 
@@ -162,7 +198,7 @@ function calculate (first, second) { // function to calculate the result of the 
               firstNumber = null;
               nextReady = true;
               return;
-              }
+            }
             result = first / second;
             break;
         default: 

@@ -12,7 +12,7 @@ categories: [C1.4]
 ---
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-  <img src="{{site.baseurl}}/images/canyouhearmelink.gif" alt="Zelda's Crystal, The Legend of Zelda: Skyward Sword" />
+  <img src="{{site.baseurl}}/images/isitsupposedtobedoingthatzelink.gif" alt="Below Hyrule Castle, The Legend of Zelda: Tears of the Kingdom" />
 </div>  
 
 <!-->
@@ -26,24 +26,11 @@ Mabel Szeto: Cognitive Science BS at UCSD, machine learning
 Anthony Vo: Computer Science BS at UCI, worked at Code Ninjas  
 
 **Take-Aways**  
-- just do a lot of applications  
-- strong cognitive science programs at UCSD  
-- CS is hard to switch into at UCSD because it is impacted and a lottery  
-- you might want to look into more niche things like data science  
-- ultimately, doesn't matter much where you go for undergrad  
-- teachings positions of coding is helpful, ex: Code Ninjas  
-- you can talk about your general impact that goes beyond a simple extracurricular  
-- spend extra time making a project and building it!  
-- experience will make you a lot better  
-- having tangible evidence that you are capable helps employers to know that you are right for the job  
-- UCSD does a lot of portfolios  
-- find a website or company that you're interested in, so just make your own rendition of something that they already have  
-- see if you can build something that you genuinely enjoy messing with; a hobby!  
-- leetcode leetcode leetcode  
-- but it's difficult :frown:  
-- take a task and break it down if you're struggling  
-- sveltekit
+To increase your chances of success in the college application process, it's crucial to cast a wide net when applying to programs, especially considering that UCSD's Computer Science program can be challenging to switch into due to its impacted status and lottery system (and also because it's very strong!). Exploring more specialized fields like data science might be a more viable alternative. Remember that your choice of undergraduate institution matters less than your commitment to learning and growing. Consider teaching coding positions like those at Code Ninjas to enhance your skills and impact. Prioritize building substantial projects to gain valuable experience, as tangible evidence of your capabilities is attractive to potential employers, which also aligns well with UCSD's focus on portfolios. Create your own projects, maybe emulating websites or companies you're interested in, or delve into a hobby project that genuinely piques your curiosity. LeetCode practice is essential, even though it can be challenging; if you're struggling, break tasks down into manageable steps. You could also consider exploring tools like SvelteKit to aid your development journey.  
 
 **Questions I'll Research on my Own**  
 - is cognitive science a good major for pre-med?  
 - what kind of projects can i code that would be suitable for my major?  
+
+**Reflection**  
+I've learned that in order to have a successful college application season, I must be dedicated and passionate when I pursue my projects for long-term goals. Computer Science is a highly competitive major, so I need to focus on making sure that my extracurriculars line up, and if I don't feel that my application is strong enough, I should try for a different but similar major that isn't as impacted/lottery.

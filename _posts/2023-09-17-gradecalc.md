@@ -12,7 +12,7 @@ categories: [C1.4]
 ---
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-  <img src="{{site.baseurl}}/images/canyouhearmelink.gif" alt="Zelda's Crystal, The Legend of Zelda: Skyward Sword" />
+  <img src="{{site.baseurl}}/images/championslink.gif" alt="The Champions, The Legend of Zelda: Age of Calamity" />
 </div>
 
 %%html

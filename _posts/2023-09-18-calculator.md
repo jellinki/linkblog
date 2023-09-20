@@ -7,6 +7,7 @@ description: My modification of the JS Calculator!
 courses: { csse: {week: 5} }
 type: hacks
 ---
+
 <!-- 
 Hack 0: Right justify result
 Hack 1: Test conditions on small, big, and decimal numbers, report on findings. Fix issues.

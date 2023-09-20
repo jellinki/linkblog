@@ -2,7 +2,7 @@
 toc: true
 comments: true
 layout: post
-title:  Grade Input Calculator
+title: Grade Input Calculator
 subtitle: Katelyn Gelle
 cover-img: /images/swordplaylink.gif
 description: My modification of the JS Grade Input Calculator!
@@ -102,6 +102,10 @@ function deleteInputLine(index) {
         if (inputElement) {
             inputElement.value = ''; // Clear the input value of the first cell
             inputElement.className = ''; // Reset the background color
+            // Reset the total, count, and average when the first cell is cleared
+            document.getElementById('total').innerHTML = '0.0';
+            document.getElementById('count').innerHTML = '0.0';
+            document.getElementById('average').innerHTML = '0.0';
         }
     } else {
         if (scoreElement) {
@@ -136,7 +140,8 @@ function deleteInputLine(index) {
             document.querySelector('button[for="' + nextIndex + '"]').setAttribute('for', i);
         }
 
-        calculator({ key: "Tab" }); // Recalculate totals
+        // Recalculate totals when cells are deleted
+        calculator({ key: "Tab" });
     }
 }
 
@@ -161,6 +166,16 @@ function handleInputChange(event) {
         calculator(event);
         var index = event.target.id;
         setColor(index);
+
+        // Automatically focus on the next input cell
+        if (key === "Enter") {
+            var nextIndex = parseInt(index) + 1;
+            var nextInput = document.getElementById(nextIndex);
+
+            if (nextInput) {
+                nextInput.focus();
+            }
+        }
     }
 }
 

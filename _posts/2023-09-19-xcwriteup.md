@@ -12,7 +12,7 @@ categories: [C1.4]
 ---
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-  <img src="{{site.baseurl}}/images/isitsupposedtobedoingthatzelink.gif" alt="Below Hyrule Castle, The Legend of Zelda: Tears of the Kingdom" />
+  <img src="{{site.baseurl}}/images/totklinkgif.gif" alt="Link Against the Gloom, The Legend of Zelda: Tears of the Kingdom" />
 </div>  
 
 <!-->

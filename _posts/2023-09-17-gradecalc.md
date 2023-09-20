@@ -66,7 +66,7 @@ function calculator(event) {
 
         for (var i = 0; i < array.length; i++) {  // iterate through array
             var value = array[i].value;
-            if (parseFloat(value)) {
+            if (value !== '' && parseFloat(value)) {
                 var parsedValue = parseFloat(value);
                 total += parsedValue;  // add to running total
                 count++;
@@ -181,6 +181,19 @@ function handleInputChange(event) {
 
 // Creates a new input box
 function newInputLine() {
+    // Get the highest existing index to determine the current index
+    var existingIndices = Array.from(document.querySelectorAll('input[name="score"]')).map(function (el) {
+        return parseInt(el.id);
+    });
+    var highestIndex = Math.max(...existingIndices);
+
+    // Initialize currentIndex correctly
+    if (isNaN(highestIndex) || highestIndex === -Infinity) {
+        currentIndex = 1;
+    } else {
+        currentIndex = highestIndex + 1;
+    }
+
     // Add a delete button for each score element
     var deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Delete';

@@ -26,36 +26,36 @@ type: hacks
   /* Number buttons */
   .calculator-number {
     border-radius: 5px;
-    padding: 5px; /* Smaller padding for smaller buttons */
-    font-size: 18px; /* Slightly smaller font size */
+    padding: 5px; 
+    font-size: 18px; 
     text-align: center;
-    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
-    color: white; /* Text color is white */
+    background-color: rgba(0, 0, 128, 0.7); 
+    color: white; 
     cursor: pointer;
-    box-shadow: 0 0 5px pink; /* Pink outline */
+    box-shadow: 0 0 5px pink; 
   }
 
   /* Operation buttons */
   .calculator-operation {
     border-radius: 5px;
-    padding: 5px; /* Smaller padding for smaller buttons */
-    font-size: 18px; /* Slightly smaller font size */
+    padding: 5px; 
+    font-size: 18px; 
     text-align: center;
-    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
-    color: white; /* Text color is white */
+    background-color: rgba(0, 0, 128, 0.7); 
+    color: white; 
     cursor: pointer;
-    box-shadow: 0 0 5px pink; /* Pink outline */
+    box-shadow: 0 0 5px pink; 
   }
 
   /* Result display */
   .calculator-output {
-    grid-column: span 4; /* Result display spans all 4 columns in the row */
+    grid-column: span 4; 
     border-radius: 10px;
     padding: 0.25em;
     font-size: 20px;
     border: 5px solid black;
-    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
-    color: white; /* Text color is white */
+    background-color: rgba(0, 0, 128, 0.7); 
+    color: white; 
     display: flex;
     align-items: right;
   }
@@ -63,13 +63,13 @@ type: hacks
   /* Equals and Clear buttons */
   .calculator-equals, .calculator-clear {
     border-radius: 5px;
-    padding: 5px; /* Smaller padding for smaller buttons */
-    font-size: 18px; /* Slightly smaller font size */
+    padding: 5px; 
+    font-size: 18px; 
     text-align: center;
-    background-color: rgba(0, 0, 128, 0.7); /* Dark blue with transparency */
-    color: white; /* Text color is white */
+    background-color: rgba(0, 0, 128, 0.7); 
+    color: white; 
     cursor: pointer;
-    box-shadow: 0 0 5px pink; /* Pink outline */
+    box-shadow: 0 0 5px pink; 
   }
 </style>
 

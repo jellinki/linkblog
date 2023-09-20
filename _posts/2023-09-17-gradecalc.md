@@ -2,7 +2,7 @@
 toc: true
 comments: true
 layout: post
-title: Grade Input Calculator
+title:  Grade Input Calculator
 subtitle: Katelyn Gelle
 cover-img: /images/swordplaylink.gif
 description: My modification of the JS Grade Input Calculator!
@@ -131,17 +131,25 @@ function deleteInputLine(index) {
         // Decrement the current index
         currentIndex--;
 
-        // Reassign IDs to remaining input elements
-        for (var i = index; i < currentIndex; i++) {
-            var nextIndex = i + 1;
-            document.getElementById(nextIndex).id = i;
-            document.querySelector('label[for="' + nextIndex + '"]').htmlFor = i;
-            document.querySelector('br[for="' + nextIndex + '"]').setAttribute('for', i);
-            document.querySelector('button[for="' + nextIndex + '"]').setAttribute('for', i);
+        // Reassign IDs and labels to remaining input elements
+        for (var i = index + 1; i <= currentIndex; i++) {
+            var prevIndex = i - 1;
+            document.getElementById(i).id = prevIndex;
+            document.querySelector('label[for="' + i + '"]').htmlFor = prevIndex;
+            document.querySelector('br[for="' + i + '"]').setAttribute('for', prevIndex);
+            document.querySelector('button[for="' + i + '"]').setAttribute('for', prevIndex);
         }
 
         // Recalculate totals when cells are deleted
         calculator({ key: "Tab" });
+
+        // Automatically focus on the next input cell (if it exists)
+        var nextIndex = index + 1;
+        var nextInput = document.getElementById(nextIndex);
+
+        if (nextInput) {
+            nextInput.focus();
+        }
     }
 }
 
@@ -166,16 +174,6 @@ function handleInputChange(event) {
         calculator(event);
         var index = event.target.id;
         setColor(index);
-
-        // Automatically focus on the next input cell
-        if (key === "Enter") {
-            var nextIndex = parseInt(index) + 1;
-            var nextInput = document.getElementById(nextIndex);
-
-            if (nextInput) {
-                nextInput.focus();
-            }
-        }
     }
 }
 
@@ -185,7 +183,7 @@ function newInputLine() {
     var deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Delete';
     deleteButton.onclick = function () {
-        deleteInputLine(currentIndex);
+        deleteInputLine(currentIndex - 1);
     };
     deleteButton.setAttribute('for', currentIndex); // Add this line to set the "for" attribute
 
@@ -194,7 +192,7 @@ function newInputLine() {
     // Add a label for each score element
     var title = document.createElement('label');
     title.htmlFor = currentIndex;
-    title.innerHTML = currentIndex + ". ";
+    title.innerHTML = currentIndex + '. '; // Update cell labeling
     document.getElementById("scores").appendChild(title); // add to HTML
 
     // Setup score element and attributes
@@ -213,7 +211,7 @@ function newInputLine() {
 
     document.getElementById("scores").appendChild(score);  // add to HTML
 
-    // Create and add blank line after input box
+    // Create and add a line break after the input box
     var br = document.createElement("br");  // line break element
     br.setAttribute('for', currentIndex); // Set the "for" attribute for the line break
     document.getElementById("scores").appendChild(br); // add to HTML
@@ -223,14 +221,11 @@ function newInputLine() {
 
     // Increment the current index for the next input
     currentIndex++;
-
-    // Call setColor for the new input element
-    setColor(currentIndex - 1);
 }
 
 // Call setColor for existing input elements when the page loads
 document.addEventListener("DOMContentLoaded", function () {
-    for (var i = 1; i < currentIndex; i++) {
+    for (var i = 1; i <= currentIndex; i++) {
         var input = document.getElementById(i);
         if (input) {
             setColor(input);

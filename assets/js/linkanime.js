@@ -1,6 +1,6 @@
 // Get a reference to the image element
 const animatedImage = new Image();
-animatedImage.src = "C:/Users/katel/OneDrive/kvscode/new blog/linkblog/images/clearheartlink.png";
+animatedImage.src = "{{site.baseurl}}/images/clearheartlink.png";
 document.body.appendChild(animatedImage);
 
 // Set initial position and variables

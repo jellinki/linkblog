@@ -1,6 +1,6 @@
 // Get a reference to the image element
 const animatedImage = new Image();
-animatedImage.src = "https://github.com/jellinki/linkblog/blob/3545c8266fa29155315b677a0e07489251e15b1e/images/clearheartlink.png"; // Specify the relative path
+animatedImage.src = "https://github.com/jellinki/linkblog/raw/main/images/clearheartlink.png"
 document.body.appendChild(animatedImage);
 
 // Set initial position and variables

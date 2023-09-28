@@ -12,7 +12,7 @@ const numFrames = 4; // Number of frames in the sprite sheet
 
 walker.style.width = `${spriteWidth}px`;
 walker.style.height = `${spriteHeight}px`;
-walker.style.background = `url('https://i.pinimg.com/736x/4a/6c/06/4a6c064c30d2346481000e1cf07ce952--sprites-zelda.jpg') no-repeat`;
+walker.style.background = `transparent url('https://i.pinimg.com/736x/4a/6c/06/4a6c064c30d2346481000e1cf07ce952--sprites-zelda.jpg') no-repeat`;
 walker.style.position = 'absolute';
 walker.style.top = '50%';
 walker.style.left = '50%';
@@ -30,4 +30,3 @@ function animate() {
 }
 
 animate();
-

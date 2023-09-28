@@ -18,12 +18,16 @@ walker.style.top = '50%';
 walker.style.left = '50%';
 walker.style.transform = 'translate(-50%, -50%)';
 
+// Adjust the animation speed by increasing the frame duration (e.g., 200ms)
+const frameDuration = 200;
+
 // Create and start the animation
 function animate() {
     position = (position + spriteWidth) % (spriteWidth * numFrames);
     walker.style.backgroundPosition = `-${position}px 0`;
 
-    requestAnimationFrame(animate);
+    setTimeout(animate, frameDuration); // Use setTimeout to control frame duration
 }
 
 animate();
+

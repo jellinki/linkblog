@@ -12,7 +12,7 @@ const numFrames = 4; // Number of frames in the sprite sheet
 
 walker.style.width = `${spriteWidth}px`;
 walker.style.height = `${spriteHeight}px`;
-walker.style.background = `url('images\linksprites.png') no-repeat`;
+walker.style.background = `url('C:\Users\katel\OneDrive\kvscode\new blog\linkblog\images\linksprites.png') no-repeat`;
 walker.style.position = 'absolute';
 walker.style.top = '50%';
 walker.style.left = '50%';

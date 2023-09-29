@@ -20,9 +20,9 @@ categories: [C1.4]
             <input type="radio" name="animation" id="idle" checked>
             <label for="idle">Idle</label><br>
             <input type="radio" name="animation" id="walkfront">
-            <label for="walkfront">Run</label><br>
+            <label for="walkfront">Walkfront</label><br>
             <input type="radio" name="animation" id="walkback">
-            <label for="walkback">Punch</label><br>
+            <label for="walkback">Walkback</label><br>
         </div>
     </div>
 </body>

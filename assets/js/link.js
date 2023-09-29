@@ -27,5 +27,3 @@ function animate() {
     gameFrame++;
     requestAnimationFrame(animate);
 }
-
-// Don't call requestAnimationFrame here; it's already called inside the animate function.

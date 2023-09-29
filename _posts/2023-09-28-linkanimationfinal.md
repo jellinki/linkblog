@@ -36,9 +36,9 @@ categories: [C1.4]
         const FRAME_LIMIT = 5;
         canvas.width = SPRITE_WIDTH * SCALE_FACTOR;
         canvas.height = SPRITE_HEIGHT * SCALE_FACTOR;
-        class Sonic {
+        class Link {
             constructor() {
-                this.image = document.getElementById("sonicSprite");
+                this.image = document.getElementById("linkSprite");
                 this.spriteWidth = SPRITE_WIDTH;
                 this.spriteHeight = SPRITE_HEIGHT;
                 this.width = this.spriteWidth;

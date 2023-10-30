@@ -19,7 +19,7 @@ categories: [C1.4]
 
 During the project, I used issues sparingly. Most of my progress is documented in my own blog, which I have been updating daily with my progress. The documentation begins on Day 30 in the Week 7 blog and continues onward into Week 11. It's incredible to think that it's already been four weeks; time really does fly!  
 
-Anyway, here are my [issues](https://github.com/Gabriel-Gravin/Teamwork/issues). I only have one so far as of October 30th, 2023, but I'll probably add another one so I can talk about making the minigame and describing the process it took our group to implement everything we learned from our mini-projects into the main game.  
+Anyway, here are our [issues](https://github.com/Gabriel-Gravin/Teamwork/issues). I only have one so far as of October 30th, 2023, but I'll probably add another one so I can talk about making the minigame and describing the process it took our group to implement everything we learned from our mini-projects into the main game.  
 
 Summary of what I've talked about and would like to talk about in my issues:  
 - Background and platform changes. I played around a lot with these so I could find a style that suit the game; I didn't want it to be too difficult and have platforms spawn at a sporadic rate while the background scrolled on too fast. I also didn't want it to be too easy. In summary, I made the scroll speed and platform spawn placement/spawn rate fairly generous while also upping the player's fall speed and removing their ability to run in midair without falling.  

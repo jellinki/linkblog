@@ -22,4 +22,54 @@ Anyway, here are our [issues](https://github.com/Gabriel-Gravin/Teamwork/issues)
 Summary of what I've talked about and would like to talk about in my issues:
 - Background and platform changes. I played around a lot with these so I could find a style that suits the game; I didn't want it to be too difficult and have platforms spawn at a sporadic rate while the background scrolled on too fast. I also didn't want it to be too easy. In summary, I made the scroll speed and platform spawn placement/spawn rate fairly generous while also upping the player's fall speed and removing their ability to run in midair without falling.
 - Group work. As a group, we all set mini-goals that we eventually put into the main game. We have several minigames available on our blog that all ended up contributing to the big project. For example, there is a freeplay minigame available where I drafted Link's movement and animations; he originally used the arrow pad and space bar. Daisy also created minigames where she could test collisions. Gabriel illustrated and programmed the scrolling background, and Kaden implemented WASD controls into the sprite movement. We combined all of these into the final game, and all of our contributions can be seen in the result.
-- Sprite movement. Link's movement started out as mere animations that played when selecting their corresponding buttons. We then moved on into putting him in the minigame, where he used the arrow pad and space bar to move and jump. There were some problems at first; for example, he would randomly disappear when jumping. These turned out to be due to an incorrect image sequence. We then evolved the movement so that he could use the WASD controls to move, which were more convenient because they can be used with one hand; the original movement required two hands to be truly convenient.
+- Sprite movement. Link's movement started out as mere animations that played when selecting their corresponding buttons. We then moved on into putting him in the minigame, where he used the arrow pad and space bar to move and jump. There were some problems at first; for example, he would randomly disappear when jumping. These turned out to be due to an incorrect image sequence. We then evolved the movement so that he could use the WASD controls to move, which were more convenient because they can be used with one hand; the original movement required two hands to be truly convenient.  
+
+## Overview of game controls  
+
+The game controls are very simple; A to move left, D to move right, and W to jump. I guess you could say it's more WAD than WASD because the "S" key is never actually used. Hmm.  
+
+![WASD event listeners](wasd.png)  
+
+Above, you can see how we used event listeners to implement the WASD movement.  
+
+```
+function updateSpriteAnimation() {
+    if (frameX < maxFrame) {
+        frameX++;
+    } else {
+        frameX = 0;
+    }
+}
+
+function jump() {
+    if (!isJumping && isOnGround) {
+        spriteVelocityY = jumpStrength;
+        isJumping = true;
+        isOnGround = false;
+    }
+}
+
+function moveLeft() {
+    isMovingLeft = true;
+    isIdle = false;
+    frameY = 5;
+    maxFrame = 9;
+}
+
+function moveRight() {
+    isMovingRight = true;
+    isIdle = false;
+    frameY = 7;
+    maxFrame = 9;
+}
+
+function idle() {
+    isIdle = true;
+    frameY = 0;
+    maxFrame = 2;
+}
+```  
+
+Above, you can see the code that we used to call the sprite animations according to the player's movement at that point in time. The frames are named according to the spritesheet provided below:  
+
+![Link Spritesheet](linksprites.png)  

@@ -11,7 +11,9 @@ courses: { csse: {week: 11} }
 categories: [C1.4]
 ---
 
-![Link, The Legend of Zelda: Tears of the Kingdom]({{site.baseurl}}/images/thislifelink.gif)
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  <img src="{{site.baseurl}}/images/thislifelink.gif" alt="Link, The Legend of Zelda: Tears of the Kingdom" />
+</div>  
 
 ## Issues
 

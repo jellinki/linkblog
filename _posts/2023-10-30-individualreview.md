@@ -11,7 +11,7 @@ courses: { csse: {week: 11} }
 categories: [C1.4]
 ---
 
-![Link, The Legend of Zelda: Tears of the Kingdom](/images/thislifelink.gif)
+![Link, The Legend of Zelda: Tears of the Kingdom]({{site.baseurl}}/images/thislifelink.gif)
 
 ## Issues
 
@@ -28,7 +28,7 @@ Summary of what I've talked about and would like to talk about in my issues:
 
 The game controls are very simple; A to move left, D to move right, and W to jump. I guess you could say it's more WAD than WASD because the "S" key is never actually used. Hmm.  
 
-![WASD event listeners](wasd.png)  
+![WASD event listeners]({{site.baseurl}}/images/wasd.png)  
 
 Above, you can see how we used event listeners to implement the WASD movement.  
 
@@ -72,4 +72,4 @@ function idle() {
 
 Above, you can see the code that we used to call the sprite animations according to the player's movement at that point in time. The frames are named according to the spritesheet provided below:  
 
-![Link Spritesheet](linksprites.png)  
+![Link Spritesheet]({{site.baseurl}}/images/linksprites.png)  

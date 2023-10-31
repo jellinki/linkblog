@@ -75,3 +75,7 @@ function idle() {
 Above, you can see the code that we used to call the sprite animations according to the player's movement at that point in time. The frames are named according to the spritesheet provided below:  
 
 ![Link Spritesheet]({{site.baseurl}}/images/linksprites.png)  
+
+## Overview of platform spawnpoints  
+
+The platforms in the beginning of the game used to spawn extremely frequently and all around the screen; if the player abandoned the game for some time, this would result in the screen completely filling up with platforms. I have changed it since; now, there will always be a platform within jump range of the player so that they don't fall, but they don't spawn too close or too quickly. I used tracking mechanisms so that the platform knows not to spawn too close to the player and I also increased the seconds between each platform spawn so that there aren't too many spawning at a time.

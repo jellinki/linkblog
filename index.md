@@ -17,7 +17,7 @@ Hello, welcome to my blog! My name is Katelyn Gelle. I am a senior at Del Norte 
 4th Period: Computer Science  
 5th Period: AP US Government & Politics  
 
-Outside of school, I enjoy participating in Science Olympiad as both a coach and a competitor. I am a tutor in English and mathematics, and I love to both teach and play piano! Apart from these, I enjoy listening to K-Pop music, and will be going to ENHYPEN's concert in October :D
+Outside of school, I enjoy participating in Science Olympiad as both a coach and a competitor. I am a tutor in English and mathematics, and I love to both teach and play piano! Apart from these, I enjoy listening to K-Pop music, and I recently went to see ENHYPEN's concert in October! :D My bias is Lee Heeseung!
 
 ### Contact
 
